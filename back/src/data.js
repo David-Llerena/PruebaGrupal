@@ -3,120 +3,128 @@ export const dataSucursal = [
         id: 1,
         producto: {
             id: 1,
-            name: "Laptop1",
-            price: 200,
-            description: "Laptop Gamer",
+            name: "Blusa Casual",
+            price: 15.50,
+            description: "Blusa de algodón",
             category: {
                 id: 1,
-                name: "Laptops",
+                name: "Ropa",
             },
         },
         sucursal: {
             id: 1,
-            name: "Sucursal Guayaquil",
+            name: "Sucursal Norte",
         },
-        cantidad: 40,
+        cantidad: 120,
     },
     {
         id: 2,
         producto: {
-            id: 1,
-            name: "Laptop2",
-            price: 200,
-            description: "Laptop Gamer",
+            id: 2,
+            name: "Pantalón Jeans",
+            price: 28.00,
+            description: "Jean azul clásico",
             category: {
                 id: 1,
-                name: "Laptops",
+                name: "Ropa",
             },
         },
         sucursal: {
             id: 1,
-            name: "Sucursal Naranjito",
+            name: "Sucursal Norte",
         },
-        cantidad: 40,
+        cantidad: 80,
     },
     {
         id: 3,
         producto: {
-            id: 1,
-            name: "Laptop",
-            price: 200,
-            description: "Laptop Gamer",
+            id: 3,
+            name: "Vestido de Noche",
+            price: 45.00,
+            description: "Vestido elegante",
             category: {
                 id: 1,
-                name: "Laptops",
+                name: "Ropa",
             },
         },
         sucursal: {
-            id: 1,
-            name: "Sucursal Cuenca",
+            id: 2,
+            name: "Sucursal Sur",
         },
         cantidad: 40,
     },
     {
         id: 4,
         producto: {
-            id: 2,
-            name: "Teclado",
-            price: 200,
-            description: "Teclado Gamer",
+            id: 1,
+            name: "Blusa Casual",
+            price: 15.50,
+            description: "Blusa de algodón",
             category: {
                 id: 1,
-                name: "Teclados",
+                name: "Ropa",
             },
         },
         sucursal: {
-            id: 1,
-            name: "Sucursal Cuenca",
+            id: 6,
+            name: "Sucursal Norte",
         },
-        cantidad: 40,
+        cantidad: 50,
     },
     {
         id: 5,
         producto: {
             id: 2,
-            name: "Teclado",
-            price: 200,
-            description: "Teclado Gamer",
+            name: "Pantalón Jeans",
+            price: 28.00,
+            description: "Jean azul clásico",
             category: {
                 id: 1,
-                name: "Teclados",
+                name: "Ropa",
             },
         },
         sucursal: {
-            id: 1,
-            name: "Sucursal Guayaquil",
+            id: 6,
+            name: "Sucursal Norte",
         },
-        cantidad: 40,
-    },
-    {
-        id: 6,
-        producto: {
-            id: 2,
-            name: "Teclado",
-            price: 200,
-            description: "Teclado Gamer",
-            category: {
-                id: 1,
-                name: "Teclados",
-            },
-        },
-        sucursal: {
-            id: 1,
-            name: "Sucursal Milagro",
-        },
-        cantidad: 40,
+        cantidad: 30,
     },
 ];
 
-export const dataEmpresaP = {
-    id: 1,
-    nombre: "Fashion Trends",
-    ruc: "12312312",
-    direccion: {
+export const dataEmpresas = [
+    {
         id: 1,
-        ciudad: "Quito",
-        callePrincipal: "AV Falsa 123",
-        calleSecundaria: "AV Ciudadano 1223",
+        nombre: "Fashion Trends",
+        ruc: "1799999999001",
+        direccion: {
+            id: 1,
+            ciudad: "Quito",
+            callePrincipal: "Av. Naciones Unidas",
+            calleSecundaria: "Av. Amazonas",
+        },
     },
-};
+    {
+        id: 2,
+        nombre: "Tech Solutions",
+        ruc: "23423423",
+        direccion: {
+            id: 2,
+            ciudad: "Guayaquil",
+            callePrincipal: "AV 9 de Octubre",
+            calleSecundaria: "Malecón 2000",
+        },
+    },
+    {
+        id: 3,
+        nombre: "Global Trading",
+        ruc: "34534534",
+        direccion: {
+            id: 3,
+            ciudad: "Cuenca",
+            callePrincipal: "AV Gran Colombia",
+            calleSecundaria: "Calle Larga",
+        },
+    }
+];
+
+export const dataEmpresaP = dataEmpresas[0]; // Mantener compatibilidad

@@ -1,0 +1,26 @@
+services:
+  backend:
+    build: ./back
+    container_name: backend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./back:/app              # Monta la carpeta local "back" dentro del contenedor
+      - /app/node_modules        # Evita sobrescribir node_modules del contenedor
+    networks:
+      - appnet
+
+  frontend:
+    build: .                     # El Dockerfile del frontend está en la raíz
+    container_name: frontend
+    ports:
+      - "4200:4200"               # Si usas ng serve
+    volumes:
+      - .:/app                    # Monta la carpeta raíz (donde está el código Angular)
+      - /app/node_modules         # Evita sobrescribir node_modules del contenedor
+    networks:
+      - appnet
+
+networks:
+  appnet:
+    driver: bridge

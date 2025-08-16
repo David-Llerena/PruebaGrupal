@@ -1,0 +1,1 @@
+docker run -d --name factura -p 4000:4200 factura:1

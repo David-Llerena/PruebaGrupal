@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="card my-5">
+    <div class="card-header">
+      <h2>Sistema de Inventario</h2>
+    </div>
+    <div class="card-body">
+
+      <ul class="list-group mb-3">
+        <li class="list-group-item bg-warning text-danger"><strong>Empresa:</strong> {{inventory.company.name}}</li>
+        <li class="list-group-item bg-warning text-danger"><strong>RUC:</strong> {{inventory.company.ruc}}</li>
+        <li class="list-group-item bg-warning text-danger">
+          <strong>Dirección:</strong> {{inventory.company.direccion.city}},
+          {{inventory.company.direccion.principalStreet}} y {{inventory.company.direccion.secondaryStreet}}
+        </li>
+      </ul>
+
+
+      <div *ngFor="let branch of inventory?.branches" class="card my-3">
+        <div class="card-header">
+          <h5>{{branch.name}} - {{branch.city}}</h5>
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let stock of branch.stock">
+                <td>{{stock.product.name}}</td>
+                <td>{{stock.product.category.name}}</td>
+                <td>{{stock.product.price }}</td>
+                <td>{{stock.quantity}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="list-group mb-3">
+          <li class="list-group-item"><strong>Stock total:</strong> {{totalStock}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

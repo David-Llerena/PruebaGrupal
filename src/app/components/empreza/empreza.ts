@@ -11,13 +11,22 @@ import { Inventory } from '../../model/inventary';
 })
 export class EmprezaComponent implements OnInit {
   inventory!: Inventory;
-  totalStock: number = 0; // aquí guardaremos el stock total
+  totalStock: number = 0;
 
   constructor(private inventoryService: InventoryService) {}
 
   ngOnInit(): void {
-    this.inventory = this.inventoryService.getInventory();
-    this.calcularStockTotal();
+    this.inventoryService.getInventory().subscribe(
+      (data: Inventory) => {
+        this.inventory = data;   
+        console.log("Datos recibidos:", this.inventory);
+
+        this.calcularStockTotal(); 
+      },
+      (error) => {
+        console.error("Error al obtener datos:", error);
+      }
+    );
   }
 
   calcularStockTotal(): void {
